@@ -12,7 +12,10 @@ let BJSearchImageInset: CGFloat = 11.0
 let BJSearchBarLeftInset: CGFloat = 33.0
 let BJSearchBarRightInset: CGFloat = 30.0
 let BJSearchBarImageSize: CGFloat = 22.0
-
+protocol BJSearchBarDelegate{
+    func searchBarTextDidChange(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String)
+    func searchBarReturn(_ textField: UITextField)
+}
 class BJSearchBar: UIView , UITextFieldDelegate{
     
     let searchField:UITextField
@@ -21,7 +24,8 @@ class BJSearchBar: UIView , UITextFieldDelegate{
     let searchImageCircle:UIImageView
     let searchImageCrossLeft:UIImageView
     let searchImageCrossRight:UIImageView
-    
+    //delegate的值是暴露出来给其他类使用的 所以有没有赋值不一定 用？号 并且要用Var因为要给它赋值
+    var delegate:BJSearchBarDelegate?
 
     override init(frame: CGRect) {
    
@@ -85,9 +89,20 @@ class BJSearchBar: UIView , UITextFieldDelegate{
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        //判断有没有指针 判断空 传过去BJSearchBar得到 应该跟上面参数一样整个传过去 这样可以得到它的改变
+        if (self.delegate != nil){
+            self.delegate?.searchBarTextDidChange(textField, shouldChangeCharactersIn: range, replacementString: string)
+        }
         searchImageCircle.alpha = 1
         searchImageCrossLeft.alpha = 1
         searchImageCrossRight.alpha = 1
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) ->Bool{
+        if (self.delegate != nil){
+            self.delegate?.searchBarReturn(textField)
+        }
         return true
     }
     

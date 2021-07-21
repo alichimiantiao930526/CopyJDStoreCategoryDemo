@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6AA3A8327EE4D1F2DB474D2 /* libPods-HalfCircleSearchBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C610281E57FA9EF40670F7C /* libPods-HalfCircleSearchBar.a */; };
+		F449156C1FC81ABD00AB445E /* BJCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F449156A1FC81ABD00AB445E /* BJCollectionViewCell.swift */; };
+		F449156D1FC81ABD00AB445E /* BJCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F449156B1FC81ABD00AB445E /* BJCollectionViewCell.xib */; };
 		F4F4671B1FC6CD99005DEB9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F4671A1FC6CD99005DEB9D /* AppDelegate.swift */; };
 		F4F4671D1FC6CD99005DEB9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F4671C1FC6CD99005DEB9D /* ViewController.swift */; };
 		F4F467201FC6CD99005DEB9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F4671E1FC6CD99005DEB9D /* Main.storyboard */; };
@@ -16,6 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C610281E57FA9EF40670F7C /* libPods-HalfCircleSearchBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HalfCircleSearchBar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53FFFE7791DBB5C32863DD47 /* Pods-HalfCircleSearchBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalfCircleSearchBar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HalfCircleSearchBar/Pods-HalfCircleSearchBar.debug.xcconfig"; sourceTree = "<group>"; };
+		5EC444EFF24DBFB1D3BB2B0D /* Pods-HalfCircleSearchBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HalfCircleSearchBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-HalfCircleSearchBar/Pods-HalfCircleSearchBar.release.xcconfig"; sourceTree = "<group>"; };
+		F44915601FC8060C00AB445E /* HalfCircleSearchBar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HalfCircleSearchBar-Bridging-Header.h"; sourceTree = "<group>"; };
+		F449156A1FC81ABD00AB445E /* BJCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BJCollectionViewCell.swift; sourceTree = "<group>"; };
+		F449156B1FC81ABD00AB445E /* BJCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BJCollectionViewCell.xib; sourceTree = "<group>"; };
 		F4F467171FC6CD99005DEB9D /* HalfCircleSearchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HalfCircleSearchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F4671A1FC6CD99005DEB9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4F4671C1FC6CD99005DEB9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6AA3A8327EE4D1F2DB474D2 /* libPods-HalfCircleSearchBar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC18B9B6608DF2D7E31BE900 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C610281E57FA9EF40670F7C /* libPods-HalfCircleSearchBar.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E69AE114F05F8B717A215102 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53FFFE7791DBB5C32863DD47 /* Pods-HalfCircleSearchBar.debug.xcconfig */,
+				5EC444EFF24DBFB1D3BB2B0D /* Pods-HalfCircleSearchBar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F4F4670E1FC6CD99005DEB9D = {
 			isa = PBXGroup;
 			children = (
 				F4F467191FC6CD99005DEB9D /* HalfCircleSearchBar */,
 				F4F467181FC6CD99005DEB9D /* Products */,
+				E69AE114F05F8B717A215102 /* Pods */,
+				AC18B9B6608DF2D7E31BE900 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +92,9 @@
 				F4F467211FC6CD99005DEB9D /* Assets.xcassets */,
 				F4F467231FC6CD99005DEB9D /* LaunchScreen.storyboard */,
 				F4F467261FC6CD99005DEB9D /* Info.plist */,
+				F44915601FC8060C00AB445E /* HalfCircleSearchBar-Bridging-Header.h */,
+				F449156A1FC81ABD00AB445E /* BJCollectionViewCell.swift */,
+				F449156B1FC81ABD00AB445E /* BJCollectionViewCell.xib */,
 			);
 			path = HalfCircleSearchBar;
 			sourceTree = "<group>";
@@ -74,9 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4F467291FC6CD99005DEB9D /* Build configuration list for PBXNativeTarget "HalfCircleSearchBar" */;
 			buildPhases = (
+				597C3D134130E07E4BED10EE /* [CP] Check Pods Manifest.lock */,
 				F4F467131FC6CD99005DEB9D /* Sources */,
 				F4F467141FC6CD99005DEB9D /* Frameworks */,
 				F4F467151FC6CD99005DEB9D /* Resources */,
+				574AADE690C42001A6F6B6C2 /* [CP] Embed Pods Frameworks */,
+				F64274BCC856358B7C1CC428 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -99,6 +134,7 @@
 				TargetAttributes = {
 					F4F467161FC6CD99005DEB9D = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -126,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F449156D1FC81ABD00AB445E /* BJCollectionViewCell.xib in Resources */,
 				F4F467251FC6CD99005DEB9D /* LaunchScreen.storyboard in Resources */,
 				F4F467221FC6CD99005DEB9D /* Assets.xcassets in Resources */,
 				F4F467201FC6CD99005DEB9D /* Main.storyboard in Resources */,
@@ -134,11 +171,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		574AADE690C42001A6F6B6C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HalfCircleSearchBar/Pods-HalfCircleSearchBar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		597C3D134130E07E4BED10EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HalfCircleSearchBar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F64274BCC856358B7C1CC428 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HalfCircleSearchBar/Pods-HalfCircleSearchBar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F4F467131FC6CD99005DEB9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F449156C1FC81ABD00AB445E /* BJCollectionViewCell.swift in Sources */,
 				F4F4672D1FC6CDB2005DEB9D /* BJSearchBar.swift in Sources */,
 				F4F4671D1FC6CD99005DEB9D /* ViewController.swift in Sources */,
 				F4F4671B1FC6CD99005DEB9D /* AppDelegate.swift in Sources */,
@@ -220,6 +309,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/HalfCircleSearchBar/Bridge.h ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -269,6 +359,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/HalfCircleSearchBar/Bridge.h ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -276,13 +367,20 @@
 		};
 		F4F4672A1FC6CD99005DEB9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53FFFE7791DBB5C32863DD47 /* Pods-HalfCircleSearchBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 738UP5XH98;
 				INFOPLIST_FILE = HalfCircleSearchBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.peng.HalfCircleSearchBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HalfCircleSearchBar/HalfCircleSearchBar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -290,13 +388,19 @@
 		};
 		F4F4672B1FC6CD99005DEB9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EC444EFF24DBFB1D3BB2B0D /* Pods-HalfCircleSearchBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 738UP5XH98;
 				INFOPLIST_FILE = HalfCircleSearchBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.peng.HalfCircleSearchBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HalfCircleSearchBar/HalfCircleSearchBar-Bridging-Header.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

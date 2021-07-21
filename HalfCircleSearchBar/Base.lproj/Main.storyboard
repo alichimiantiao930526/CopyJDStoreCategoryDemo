@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,68 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HalfCircleSearchBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2qI-Xc-sWz">
+                                <rect key="frame" x="0.0" y="69" width="91.5" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="CYL-lc-Mpm"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dXW-ji-8KU"/>
+                                </connections>
+                            </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TNv-Xg-a0H">
+                                <rect key="frame" x="101.5" y="69" width="273.5" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="YOt-k0-22S">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="1Xm-5v-LA2"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="AFs-ze-HFF"/>
+                                </connections>
+                            </collectionView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4U-7Y-Afo">
+                                <rect key="frame" x="30" y="30" width="315" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="K1U-V7-IBj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2qI-Xc-sWz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8ON-pg-Q3r"/>
+                            <constraint firstItem="J4U-7Y-Afo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Ip4-8w-FGF"/>
+                            <constraint firstItem="TNv-Xg-a0H" firstAttribute="leading" secondItem="2qI-Xc-sWz" secondAttribute="trailing" constant="10" id="Oqw-nm-hPs"/>
+                            <constraint firstItem="TNv-Xg-a0H" firstAttribute="width" secondItem="2qI-Xc-sWz" secondAttribute="width" multiplier="3:1" id="T9S-5Y-DDp"/>
+                            <constraint firstItem="2qI-Xc-sWz" firstAttribute="top" secondItem="J4U-7Y-Afo" secondAttribute="bottom" constant="5" id="Zc1-bS-sWK"/>
+                            <constraint firstItem="2qI-Xc-sWz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bKz-MU-kov"/>
+                            <constraint firstItem="TNv-Xg-a0H" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dIp-j3-nZy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J4U-7Y-Afo" secondAttribute="trailing" constant="30" id="h1N-UP-X30"/>
+                            <constraint firstItem="TNv-Xg-a0H" firstAttribute="top" secondItem="J4U-7Y-Afo" secondAttribute="bottom" constant="5" id="j6y-he-sxW"/>
+                            <constraint firstItem="J4U-7Y-Afo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="qFg-oO-UIe"/>
+                            <constraint firstItem="TNv-Xg-a0H" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="udg-1U-YGP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="TNv-Xg-a0H" id="oCG-pu-DUA"/>
+                        <outlet property="flowLayout" destination="YOt-k0-22S" id="nLk-wm-d27"/>
+                        <outlet property="searchBarFrameView" destination="J4U-7Y-Afo" id="Pdn-hv-Zid"/>
+                        <outlet property="tableView" destination="2qI-Xc-sWz" id="8hZ-Rp-c5P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>
